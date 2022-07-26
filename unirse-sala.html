@@ -1,0 +1,194 @@
+<html><head>
+  <meta charset="UTF-8">
+
+<title>Crear Chat</title>
+  <script src="https://use.fontawesome.com/e63bef178e.js"></script>
+  <script src='file:///android_asset/app.js'></script>
+  <script src='sticker.js'></script>
+  <script src='rata-on.js'></script>
+  <script src='kliente-on.js'></script>
+  <link rel="stylesheet" href="chat.css">
+  
+    <script>
+      var x=Math.ceil(Math.random()*7736);
+      var usuario = app.GetUser();
+
+    function nick() {
+      var x=Math.ceil(Math.random()*7736);
+      var usuario = "Nick" + x
+
+        document.getElementById("nick").value = usuario;
+        var usuario = document.getElementById("nick").value;
+        setTimeout('bot()',1000);
+    }
+
+</script>
+
+</head>
+
+<body>
+  <div class="chat-container">
+  <ul class="chat-feed">
+
+  </ul>
+<div id="arriba">
+      <textarea style="height: 50px; width: 100%; font-size: 16px; background-color: #f6ecbf; font-family: 'Open Sans', sans-serif; border: none; overflow: auto; outline: none; padding-top: 5%; padding-left: 55px;" placeholder="Escríbe un mensaje..." id='message'></textarea>
+
+<input type="image" id="logos" src="Img/casa.png" onclick="location.href='index.html'" name="submit" width="35" height="35"/>
+<input type="image" id="logos" src="Img/rata.png" onclick="rata()" name="submit" width="35" height="35"/>
+<input type="image" id="logos" src="Img/kliente.png" onclick="kliente()" name="submit" width="35" height="35"/>
+
+
+<div class="seleccion" id="memes" Onclick="">
+  <div class="options">
+  <input type="radio" id="pictograma" value="2">
+  <form name=imagenes><br><br>
+<label><input type="Radio" name="pictograma" OnClick='imagen1()'><img src="Img/img1.webp" border="0"  width="50" height="50"/></label>
+<label><input type="Radio" name="pictograma" OnClick='imagen2()'><img src="Img/img2.webp" border="0"  width="50" height="50"/></label>
+<label><input type="Radio" name="pictograma" OnClick='imagen3()'><img src="Img/img3.webp" border="0"  width="50" height="50"/></label>
+<label><input type="Radio" name="pictograma" OnClick='imagen4()'><img src="Img/img4.webp" border="0"  width="50" height="50"/></label>
+<label><input type="Radio" name="pictograma" OnClick='imagen5()'><img src="Img/img5.webp" border="0"  width="50" height="50"/></label>
+<label><input type="Radio" name="pictograma" OnClick='imagen6()'><img src="Img/img6.webp" border="0"  width="50" height="50"/></label>
+<label><input type="Radio" name="pictograma" OnClick='imagen7()'><img src="Img/img7.webp" border="0"  width="50" height="50"/></label>
+<label><input type="Radio" name="pictograma" OnClick='imagen8()'><img src="Img/img8.webp" border="0"  width="50" height="50"/></label>
+<label><input type="Radio" name="pictograma" OnClick='imagen9()'><img src="Img/img9.webp" border="0"  width="50" height="50"/></label>
+<label><input type="Radio" name="pictograma" OnClick='imagen10()'><img src="Img/img10.webp" border="0"  width="50" height="50"/></label>
+<label><input type="Radio" name="pictograma" OnClick='imagen11()'><img src="Img/img11.webp" border="0"  width="50" height="50"/></label>
+<label><input type="Radio" name="pictograma" OnClick='imagen12()'><img src="Img/img12.webp" border="0"  width="50" height="50"/></label>
+<label><input type="Radio" name="pictograma" OnClick='imagen13()'><img src="Img/img13.webp" border="0"  width="50" height="50"/></label>
+<label><input type="Radio" name="pictograma" OnClick='imagen14()'><img src="Img/img14.webp" border="0"  width="50" height="50"/></label>
+<label><input type="Radio" name="pictograma" OnClick='imagen15()'><img src="Img/img15.webp" border="0"  width="50" height="50"/></label>
+<label><input type="Radio" name="pictograma" OnClick='imagen16()'><img src="Img/img16.webp" border="0"  width="50" height="50"/></label>
+<label><input type="Radio" name="pictograma" OnClick='imagen17()'><img src="Img/img17.webp" border="0"  width="50" height="50"/></label>
+<label><input type="Radio" name="pictograma" OnClick='imagen18()'><img src="Img/img18.webp" border="0"  width="50" height="50"/></label>
+<label><input type="Radio" name="pictograma" OnClick='imagen19()'><img src="Img/img19.webp" border="0"  width="50" height="50"/></label>
+<label><input type="Radio" name="pictograma" OnClick='imagen20()'><img src="Img/img20.webp" border="0"  width="50" height="50"/></label>
+
+</div></div>
+
+
+
+<input type="image" id="logos" src="Img/shared.png" onclick="shared()" name="submit" width="35" height="35"/>
+
+
+</div>
+<div id="todo">
+<center><textarea style="background: #f6ecbf; border-radius: 15px; border: 2px solid #F1DB79;" placeholder="Escribe aquí un nick..." id="nick" rows="2" cols="30"></textarea></center>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+  
+    <script>
+    var config = {
+    apiKey: "XXXXXXXXXXXXXXXXXXXXXXX",
+    authDomain: "xxxxxxxxxxxxx.firebaseapp.com",
+    databaseURL: "xxxxxxxxxx.firebaseio.com",
+    projectId: "xxxxxxxx",
+    storageBucket: "xxxx.appspot.com",
+    messagingSenderId: "1234567890",
+    appId: "1:00000000000000000000000000000",
+    measurementId: "G-AAAAAAAA"
+        };
+        
+    firebase.initializeApp(config);
+  
+
+const db = firebase.database();
+const chatForm = document.querySelector('form');
+const textBox = document.querySelector('textarea');
+const chats = document.querySelector('ul');
+
+var d = new Date();
+var ramdom = Math.floor(Math.random() * 100*5);
+var codigo = location.hash
+codigo = codigo.replace(/#/gi,"");
+
+
+
+if (codigo == null) {
+    app.Alert("El codigo no es valido.", "ERROR","", 180 );
+    location.href = "index.html"
+    }
+
+if (codigo == '') {
+    app.Alert("El codigo no es valido.", "ERROR","", 180 );
+    location.href = "index.html"
+    }
+    
+var chat = 'Salas/Temporal/' + codigo
+const sessionId = document.getElementById("nick").value;
+
+const chatsRef = db.ref('/' + chat);
+  const mensajeId = Date.now();
+  var d = new Date();
+    var f = new Date();
+  var tiempo = d.getHours() + ":" + d.getMinutes()
+  var fecha = d.getHours() + ":" + d.getMinutes()
+
+
+function bot() {
+    var usuario = document.getElementById("nick").value;
+
+    var aaa="Bot"
+    var texto ="El usuario " + usuario + " se unió al chat."
+    db.ref(chat + '/' + mensajeId).set({
+        id: aaa,
+        mensaje: texto
+        });
+    }
+
+function handleSubmit(e) {
+  e.preventDefault();
+  
+  if (!textBox.value) {
+    return;
+  }
+    const mensajeId = Date.now();
+  var d = new Date();
+  var tiempo = d.getHours() + ":" + d.getMinutes()
+
+
+
+textBox.value = textBox.value.replace(/</gi,"");
+textBox.value = textBox.value.replace(/>/gi,"");
+var usuario = document.getElementById("nick").value;
+
+  db.ref(chat + '/' + mensajeId).set({
+    id: sessionId,
+    mensaje: "<b>" + usuario + "</b> <br><i>" + tiempo + '</i><br>' + textBox.value
+  });
+  
+  textBox.value = '';
+}
+
+chatsRef.on('child_added', handleChildAdded);
+
+function handleChildAdded(data) {
+  const mensajeData = data.val();
+  const li = document.createElement('li');
+  
+
+  if (mensajeData.id !== sessionId) {
+  li.classList.add('other');
+  }
+  
+  chats.appendChild(li);
+  chats.scrollTop = chats.scrollHeight;
+}
+
+textBox.addEventListener('keydown', handleKeyDown);
+
+function handleKeyDown(e) {
+  if (e.which == 13) {
+    handleSubmit(e);
+  }
+}
+
+function shared() {
+      var mensaje="¿Te atreves a jugar conmigo a Rata o Kliente?\nUnete a mi sala para jugar 😈😈😈\n" + codigo + "\n\nhttps://playshopapk.000webhostapp.com/Inicio/RataoKliente/"
+          app.OpenUrl( "https://api.whatsapp.com/send?text=" + mensaje);
+
+    }
+</script>
+<body onload="nick()">
+</html>
