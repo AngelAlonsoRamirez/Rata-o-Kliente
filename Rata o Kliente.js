@@ -31,7 +31,7 @@ function OnStart() {
     
 
 	var ver = app.GetVersion();
-	app.GA( "create", "UA-1234567890-1" );
+	app.GA( "create", "UA-168116021-1" );
 	app.GA( "send", "screenview", 
 	    {"appName":"Rata o Kliente","appVersion":ver,"screenName":"main"});
 

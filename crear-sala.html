@@ -81,18 +81,20 @@
 <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
   
     <script>
+function _0x1d14(_0x1447a1,_0x5b9ff2){var _0x3df98c=_0x3df9();return _0x1d14=function(_0x1d14b0,_0x4300bd){_0x1d14b0=_0x1d14b0-0xc0;var _0x21190c=_0x3df98c[_0x1d14b0];return _0x21190c;},_0x1d14(_0x1447a1,_0x5b9ff2);}var _0x3d4e7d=_0x1d14;(function(_0x2056dc,_0x24a4b0){var _0x4afd56=_0x1d14,_0x9768df=_0x2056dc();while(!![]){try{var _0x1c4c2a=-parseInt(_0x4afd56(0xca))/0x1*(-parseInt(_0x4afd56(0xce))/0x2)+parseInt(_0x4afd56(0xc1))/0x3+parseInt(_0x4afd56(0xcc))/0x4+-parseInt(_0x4afd56(0xcd))/0x5+parseInt(_0x4afd56(0xc3))/0x6+parseInt(_0x4afd56(0xcb))/0x7*(-parseInt(_0x4afd56(0xc0))/0x8)+-parseInt(_0x4afd56(0xc5))/0x9*(-parseInt(_0x4afd56(0xd0))/0xa);if(_0x1c4c2a===_0x24a4b0)break;else _0x9768df['push'](_0x9768df['shift']());}catch(_0x3b5236){_0x9768df['push'](_0x9768df['shift']());}}}(_0x3df9,0x98cb6));var config={'apiKey':_0x3d4e7d(0xc2),'authDomain':_0x3d4e7d(0xcf),'databaseURL':_0x3d4e7d(0xc6),'projectId':'rata-o-kliente-chat','storageBucket':_0x3d4e7d(0xc9),'messagingSenderId':_0x3d4e7d(0xc4),'appId':_0x3d4e7d(0xc7)};firebase[_0x3d4e7d(0xc8)](config);function _0x3df9(){var _0x431a0e=['4930814kQLdjE','3161688cVEneT','4581165VEAyLP','5142lhmDsp','rata-o-kliente-chat.firebaseapp.com','11608530sCrwQn','8qcMdeH','320235ebVVIi','AIzaSyChSGzWz3Isu6hvYh329SVDPcLuDi1kkE4','467448zWZXtk','130260375848','9HrDXvq','https://rata-o-kliente-chat.firebaseio.com','1:130260375848:web:073ed525bed8d999','initializeApp','rata-o-kliente-chat.appspot.com','43QNzwZg'];_0x3df9=function(){return _0x431a0e;};return _0x3df9();}
+/*
     var config = {
-    apiKey: "XXXXXXXXXXXXXXXXXXXXXXX",
-    authDomain: "xxxxxxxxxxxxx.firebaseapp.com",
-    databaseURL: "xxxxxxxxxx.firebaseio.com",
-    projectId: "xxxxxxxx",
-    storageBucket: "xxxx.appspot.com",
-    messagingSenderId: "1234567890",
-    appId: "1:00000000000000000000000000000",
-    measurementId: "G-AAAAAAAA"
+        apiKey: "",
+        authDomain: "",
+        databaseURL: "",
+        projectId: "",
+        storageBucket: "",
+        messagingSenderId: "",
+        appId: ""
         };
         
     firebase.initializeApp(config);
+  */
   
 
 const db = firebase.database();
@@ -137,6 +139,45 @@ function handleSubmit(e) {
   var tiempo = d.getHours() + ":" + d.getMinutes()
 
 
+    textBox.value = textBox.value.replace(/puta/gi,'🤬');
+    textBox.value = textBox.value.replace(/negrata/gi,'🤬');
+    textBox.value = textBox.value.replace(/puto/gi,'🤬');
+    textBox.value = textBox.value.replace(/ostia/gi,'🤬');
+    textBox.value = textBox.value.replace(/hostia/gi,'🤬');
+    textBox.value = textBox.value.replace(/maricon/gi,'🤬');
+    textBox.value = textBox.value.replace(/gilipolla/gi,'🤬');
+    textBox.value = textBox.value.replace(/jilipolla/gi,'🤬');
+    textBox.value = textBox.value.replace(/joder/gi,'🤬');
+    
+
+    textBox.value = textBox.value.replace(/ /gi,'!🐱!');
+    textBox.value = textBox.value.replace(/a/gi,'!😀!');
+    textBox.value = textBox.value.replace(/b/gi,'!😃!');
+    textBox.value = textBox.value.replace(/c/gi,'!😄!');
+    textBox.value = textBox.value.replace(/d/gi,'!😁!');
+    textBox.value = textBox.value.replace(/e/gi,'!😆!');
+    textBox.value = textBox.value.replace(/f/gi,'!😅!');
+    textBox.value = textBox.value.replace(/g/gi,'!😂!');
+    textBox.value = textBox.value.replace(/h/gi,'!😍!');
+    textBox.value = textBox.value.replace(/i/gi,'!😎!');
+    textBox.value = textBox.value.replace(/j/gi,'!😜!');
+    textBox.value = textBox.value.replace(/k/gi,'!😝!');
+    textBox.value = textBox.value.replace(/l/gi,'!😛!');
+    textBox.value = textBox.value.replace(/m/gi,'!😋!');
+    textBox.value = textBox.value.replace(/n/gi,'!😫!');
+    textBox.value = textBox.value.replace(/ñ/gi,'!😭!');
+    textBox.value = textBox.value.replace(/o/gi,'!😠!');
+    textBox.value = textBox.value.replace(/p/gi,'!😡!');
+    textBox.value = textBox.value.replace(/q/gi,'!😳!');
+    textBox.value = textBox.value.replace(/r/gi,'!😱!');
+    textBox.value = textBox.value.replace(/s/gi,'!😨!');
+    textBox.value = textBox.value.replace(/t/gi,'!😰!');
+    textBox.value = textBox.value.replace(/u/gi,'!👿!');
+    textBox.value = textBox.value.replace(/v/gi,'!😈!');
+    textBox.value = textBox.value.replace(/w/gi,'!😹!');
+    textBox.value = textBox.value.replace(/x/gi,'!🌝!');
+    textBox.value = textBox.value.replace(/y/gi,'!🌚!');
+    textBox.value = textBox.value.replace(/z/gi,'!🐶!');
 
 textBox.value = textBox.value.replace(/</gi,"");
 textBox.value = textBox.value.replace(/>/gi,"");
@@ -156,6 +197,35 @@ function handleChildAdded(data) {
   const mensajeData = data.val();
   const li = document.createElement('li');
   
+  li.innerHTML = mensajeData.mensaje;
+  li.innerHTML = li.innerHTML.replace(/!🐱!/gi,' ');
+  li.innerHTML = li.innerHTML.replace(/!😀!/gi,'a');
+  li.innerHTML = li.innerHTML.replace(/!😃!/gi,'b');
+  li.innerHTML = li.innerHTML.replace(/!😄!/gi,'c');
+  li.innerHTML = li.innerHTML.replace(/!😁!/gi,'d');
+  li.innerHTML = li.innerHTML.replace(/!😆!/gi,'e');
+  li.innerHTML = li.innerHTML.replace(/!😅!/gi,'f');
+  li.innerHTML = li.innerHTML.replace(/!😂!/gi,'g');
+  li.innerHTML = li.innerHTML.replace(/!😍!/gi,'h');
+  li.innerHTML = li.innerHTML.replace(/!😎!/gi,'i');
+  li.innerHTML = li.innerHTML.replace(/!😜!/gi,'j');
+  li.innerHTML = li.innerHTML.replace(/!😝!/gi,'k');
+  li.innerHTML = li.innerHTML.replace(/!😛!/gi,'l');
+  li.innerHTML = li.innerHTML.replace(/!😋!/gi,'m');
+  li.innerHTML = li.innerHTML.replace(/!😫!/gi,'n');
+  li.innerHTML = li.innerHTML.replace(/!😭!/gi,'ñ');
+  li.innerHTML = li.innerHTML.replace(/!😠!/gi,'o');
+  li.innerHTML = li.innerHTML.replace(/!😡!/gi,'p');
+  li.innerHTML = li.innerHTML.replace(/!😳!/gi,'q');
+  li.innerHTML = li.innerHTML.replace(/!😱!/gi,'r');
+  li.innerHTML = li.innerHTML.replace(/!😨!/gi,'s');
+  li.innerHTML = li.innerHTML.replace(/!😰!/gi,'t');
+  li.innerHTML = li.innerHTML.replace(/!👿!/gi,'u');
+  li.innerHTML = li.innerHTML.replace(/!😈!/gi,'v');
+  li.innerHTML = li.innerHTML.replace(/!😹!/gi,'w');
+  li.innerHTML = li.innerHTML.replace(/!🌝!/gi,'x');
+  li.innerHTML = li.innerHTML.replace(/!🌚!/gi,'y');
+  li.innerHTML = li.innerHTML.replace(/!🐶!/gi,'z');
 
   if (mensajeData.id !== sessionId) {
   li.classList.add('other');
@@ -174,7 +244,7 @@ function handleKeyDown(e) {
 }
 
 function shared() {
-      var mensaje="¿Te atreves a jugar conmigo a Rata o Kliente?\nUnete a mi sala para jugar 😈😈😈\n" + codigo + "\n\nhttps://playshopapk.000webhostapp.com/Inicio/RataoKliente/"
+      var mensaje="¿Te atreves a jugar conmigo a Rata o Kliente?\nUnete a mi sala para jugar 😈😈😈\n" + codigo + "\n\nhttps://github.com/AngelAlonsoRamirez/Rata-o-Kliente/raw/main/android.apk"
           app.OpenUrl( "https://api.whatsapp.com/send?text=" + mensaje);
 
     }
